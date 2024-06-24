@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+    font-family: 'Raleway';
+    src:
+        url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype'),
+        url('../fonts/Raleway-VariableFont_wght.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src:
+        url('../fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype'),
+        url('../fonts/Raleway-Italic-VariableFont_wght.woff') format('woff');
+    font-style: italic;
+}
+
 body {
     width: 1160px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    border-right: 1px solid black;
 }
 
 header {
@@ -8,6 +28,27 @@ header {
     flex-direction: column;
     align-items: center;
     color: white;
+}
+
+.head figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo__link {
+    margin: 0 auto;
+}
+
+.head__photo {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 #dbc2a4;
+    border-radius: 50%;
+}
+
+.photo__link:hover {
+    cursor: zoom-in;
 }
 
 .head__address {
@@ -25,8 +66,14 @@ header {
     text-decoration: none;
 }
 
+.head__address a:hover {
+    text-decoration: underline;
+}
+
 .head__name {
     text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
 }
 
 main {
@@ -36,24 +83,39 @@ main {
 
 .resume {
     flex-grow: 2;
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+.resume .resume__item {
+    border-right: 1px solid rgba(0,0,0,0);
 }
 
 .resume .resume__subtitle {
     border-left: 5px solid #782221;
+    padding-left: 5px;
     background-color: #dbc2a4;
+}
+
+.resume .resume__item:hover {
+    border-right-color: #782221;
 }
 
 .sideresume {
     width: 33%;
     background-color: #782221;
+    padding-right: 50px;
 }
 
 .sideresume .resume__subtitle {
     background-color: #dbc2a4;
+    padding-left: 15px;
 }
 
 .sideresume .item__text {
     color: white;
+    text-align: justify;
+    text-indent: 15%;
 }
 
 .sideresume .list__element {
@@ -64,6 +126,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #782221;
+    color: white;
 }
 
 .socials__list {
@@ -74,7 +138,12 @@ footer {
     display: inline-block;
 }
 
+.socials__link:hover {
+    opacity: 0.5;
+}
+
 .socials__icon {
     width: 64px;
     height: 64px;
+    padding: 0 10px;
 }
